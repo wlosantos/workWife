@@ -3,6 +3,11 @@ aside {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: shadow_base();
+  transition: all .3s ease;
+}
+
+#checkMenu {
+  display: none;
 }
 
 .sidebar__base {
@@ -32,10 +37,13 @@ aside {
 
     .header_icon {
       color: $linkcolor;
-      cursor: pointer;
 
       #btnOpen {
+        cursor: pointer;
         display: none;
+      }
+      #btnClose {
+        cursor: pointer;
       }
     }
   }
@@ -55,6 +63,7 @@ aside {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      transition: all .3s ease;
 
       &:hover {
         color: $linkcolorDark;
@@ -66,5 +75,16 @@ aside {
         font-size: 2.5rem;
       }
     }
+  }
+}
+
+#checkMenu:checked ~ aside {
+  width: 104px;
+
+  #btnOpen {
+    display: block;
+  }
+  #btnClose {
+    display: none;
   }
 }

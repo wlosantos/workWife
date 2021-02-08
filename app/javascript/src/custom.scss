@@ -174,7 +174,13 @@ main {
   box-shadow: shadow_base();
 
   .containerBase {
-    // background: #f60;
+    position: relative;
+  }
+
+  .listTable {
+    max-height: 500px;
+    overflow-y: scroll;
+    border-bottom: 2px solid $linkcolorDark;
   }
 }
 

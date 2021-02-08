@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @register.name
+%p
+  %b Date register:
+  = @register.date_register
+%p
+  %b Cpf:
+  = @register.cpf
+%p
+  %b Rg:
+  = @register.rg
+%p
+  %b Birth:
+  = @register.birth
+%p
+  %b Type plan:
+  = @register.type_plan
+%p
+  %b Status:
+  = @register.status
+
+= link_to 'Edit', edit_register_path(@register)
+\|
+= link_to 'Back', registers_path

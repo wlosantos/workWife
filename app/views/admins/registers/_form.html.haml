@@ -1,0 +1,31 @@
+= form_for @register do |f|
+  - if @register.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@register.errors.count, "error")} prohibited this register from being saved:"
+      %ul
+        - @register.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :date_register
+    = f.date_select :date_register
+  .field
+    = f.label :cpf
+    = f.text_field :cpf
+  .field
+    = f.label :rg
+    = f.text_field :rg
+  .field
+    = f.label :birth
+    = f.date_select :birth
+  .field
+    = f.label :type_plan
+    = f.number_field :type_plan
+  .field
+    = f.label :status
+    = f.number_field :status
+  .actions
+    = f.submit 'Save'

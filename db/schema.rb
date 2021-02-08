@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_08_114957) do
+ActiveRecord::Schema.define(version: 2021_02_08_210903) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -24,4 +24,19 @@ ActiveRecord::Schema.define(version: 2021_02_08_114957) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "registers", force: :cascade do |t|
+    t.string "name", null: false
+    t.date "date_register"
+    t.string "cpf"
+    t.string "rg"
+    t.date "birth", null: false
+    t.integer "type_plan", default: 0
+    t.integer "status", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "parent_id"
+    t.index ["parent_id"], name: "index_registers_on_parent_id"
+  end
+
+  add_foreign_key "registers", "registers", column: "parent_id"
 end

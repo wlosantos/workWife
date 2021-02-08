@@ -50,7 +50,52 @@
 
     .contentGeral
       .containerBase
-        table
+        %h2.title.is-4
+          %i.fas.fa-cogs{style: 'font-size: .8rem'}
+          Lista de Ajustes
+        %table.table.is-striped.is-fullwidth
+          %thead
+            %tr
+              %th{width: '8%'} #
+              %th{width: '24%'} Name
+              %th Jan
+              %th Fev
+              %th Mar
+              %th Abr
+              %th Mai
+              %th Jun
+              %th Jul
+              %th Ago
+              %th Set
+              %th Out
+              %th Nov
+              %th{width: '7%'} Dez
+        .listTable
+          %table.table.is-striped.is-fullwidth
+            -# %thead
+              %tr
+                %th{width: '15px'} #
+                %th{width: '250px'} Name
+                %th Jan
+                %th Fev
+                %th Mar
+                %th Abr
+                %th Mai
+                %th Jun
+                %th Jul
+                %th Ago
+                %th Set
+                %th Out
+                %th Nov
+                %th Dez
+
+            %tbody
+              - @registers.each do |register|
+                %tr
+                  %td{width: '8%'} #{ register.id }
+                  %td{width: '25%'} #{ register.name }
+                  - 12.times do
+                    %td -
 
   .asideRight
     .panelRightTitle

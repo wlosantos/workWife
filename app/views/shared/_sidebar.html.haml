@@ -3,11 +3,12 @@
     .header_title
       -# %div w<span>ork</span>w<span>ife</span>
     .header_icon
-      #btnOpen
-        %i.fas.fa-bars
-      #btnClose
-        %i.fas.fa-times
-      #btnClose
+      %label{for: 'checkMenu'}
+        #btnOpen
+          %i.fas.fa-bars
+        #btnClose
+          %i.fas.fa-times
+        #btnClose
 
   .sidebar__menu
     = link_to :admins, class: 'menu_link' do

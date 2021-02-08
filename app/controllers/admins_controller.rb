@@ -4,6 +4,7 @@ class AdminsController < ApplicationController
   layout 'admins'
 
   def index
+    @registers = Register.all.order(:name)
   end
 
 end
