@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $backcolor_clean;
+  font-size: .95rem;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  padding: 1rem;
+}
+
+
+
+.content {
+  margin-left: 20px;
+  flex: 1;
+}

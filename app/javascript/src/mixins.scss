@@ -1,0 +1,8 @@
+$backcolor_clean: #f5f6fa;
+$linkcolor: #3F88C5;
+$linkcolorDark: #26567f;
+$backlinkcolor_hover: #e5f3fe;
+
+@function shadow_base(){
+  @return 0px 0px 2px #ccc;
+}
