@@ -1,5 +1,6 @@
 class AdminsController < ApplicationController
-  before_ation :authenticate_admin!
+
+  before_action :authenticate_admin!
   layout 'admins'
 
   def index

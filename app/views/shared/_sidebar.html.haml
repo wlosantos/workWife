@@ -1,0 +1,47 @@
+.sidebar__base
+  .sidebar__header
+    .header_title
+      -# %div w<span>ork</span>w<span>ife</span>
+    .header_icon
+      #btnOpen
+        %i.fas.fa-bars
+      #btnClose
+        %i.fas.fa-times
+      #btnClose
+
+  .sidebar__menu
+    = link_to :admins, class: 'menu_link' do
+      .link_icon
+        %i.fab.fa-delicious
+      .link_text
+        Dashboard
+
+    = link_to :admins, class: 'menu_link' do
+      .link_icon
+        %i.fas.fa-users
+      .link_text
+        Associados
+
+    = link_to :admins, class: 'menu_link' do
+      .link_icon
+        %i.fas.fa-tasks
+      .link_text
+        Lembretes
+
+    = link_to :admins, class: 'menu_link' do
+      .link_icon
+        %i.fab.fa-pagelines
+      .link_text
+        Plamor
+
+    = link_to :admins, class: 'menu_link' do
+      .link_icon
+        %i.fas.fa-file-invoice-dollar
+      .link_text
+        Pagamentos
+
+    = link_to :admins, class: 'menu_link' do
+      .link_icon
+        %i.fas.fa-envelope
+      .link_text
+        Contatos

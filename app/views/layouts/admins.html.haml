@@ -11,4 +11,9 @@
     = javascript_pack_tag 'application'
 
   %body
-    = yield
+    = render 'shared/alert'
+    %main
+      %aside
+        = render 'shared/sidebar'
+      %section.content
+        = yield
