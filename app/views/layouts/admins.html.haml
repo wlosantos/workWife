@@ -1,0 +1,14 @@
+// Arquivo padrão de configuração - W3n designer
+!!! 5
+%html
+  %head
+    %title Admin::Admin
+    = csrf_meta_tags
+    = csp_meta_tag
+    = favicon_link_tag asset_path('favicon.png')
+
+    = stylesheet_pack_tag 'application', { :media => 'all' }
+    = javascript_pack_tag 'application'
+
+  %body
+    = yield

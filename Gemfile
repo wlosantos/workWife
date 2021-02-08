@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'haml'
 gem 'haml-rails'
+gem 'devise'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -20,7 +21,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'better_errors','>= 2.7.1'
   gem 'faker'
-  # gem 'awesome_print'
+  gem 'awesome_print'
   gem 'factory_bot_rails'
 end
 

@@ -1,0 +1,11 @@
+- if notice.present?
+  #notification_box
+    .notification.is-primary
+      .delete
+      = notice
+
+- if alert.present?
+  #notification_box
+    .notification.is-danger
+      .delete
+      = alert
