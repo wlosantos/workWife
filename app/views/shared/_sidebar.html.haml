@@ -1,7 +1,7 @@
 .sidebar__base
   .sidebar__header
     .header_title
-      %div w<span>ork</span>w<span>ife</span>
+      -# %div w<span>ork</span>w<span>ife</span>
     .header_icon
       #btnOpen
         %i.fas.fa-bars
@@ -33,6 +33,12 @@
         %i.fab.fa-pagelines
       .link_text
         Plamor
+
+    = link_to :admins, class: 'menu_link' do
+      .link_icon
+        %i.fas.fa-file-invoice-dollar
+      .link_text
+        Pagamentos
 
     = link_to :admins, class: 'menu_link' do
       .link_icon

@@ -1,8 +1,8 @@
 aside {
   width: 220px;
   background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: shadow_base;
+  border-radius: 5px;
+  box-shadow: shadow_base();
 }
 
 .sidebar__base {
@@ -11,6 +11,7 @@ aside {
   flex-direction: column;
 
   .sidebar__header {
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;

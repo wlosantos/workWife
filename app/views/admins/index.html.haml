@@ -1,1 +1,108 @@
-conteudo
+%nav.navPrincipal
+  .menubar
+    .menubarLeft
+      %div w<span>ork</span>w<span>ife</span>
+    .menubarRight
+      = link_to '#', class: 'menu_bar' do
+        %i.fas.fa-tasks
+      = link_to '#', class: "menu_bar" do
+        %i.fas.fa-envelope
+      = link_to '#', class: 'menu_bar' do
+        %i.fas.fa-bell
+
+  .settingUser
+    = link_to '#', class: 'menu_bar' do
+      %i.fas.fa-cog
+.panelGeral
+  .conteudo
+    .titleConteudo
+      %h1.title.is-size-3.has-text-grey.mb-5 Dashboard
+
+    .bannerSpace
+      .banner
+        .icon_banner
+          %div
+            %i.fas.fa-users
+        .text_banner
+          %div 345
+          %small Total de Associados
+      .banner
+        .icon_banner.bn2
+          %div
+            %i.fas.fa-file-invoice-dollar
+        .text_banner
+          %div 79
+          %small Pagamentos Pendentes
+      .banner
+        .icon_banner.bn3
+          %div
+            %i.fas.fa-user-tag
+        .text_banner
+          %div 147
+          %small Associados Dependentes
+      .banner
+        .icon_banner.bn4
+          %div
+            %i.fas.fa-map-marked-alt
+        .text_banner
+          %div 25
+          %small Possíveis Locais
+
+    .contentGeral
+      .containerBase
+        table
+
+  .asideRight
+    .panelRightTitle
+      %div
+        %i.fas.fa-paperclip
+        Lembretes
+      %div
+        %i.fas.fa-ellipsis-v
+
+    .panelRightTask
+      .taskPanel
+        .task_text
+          %span.pr-2
+            07
+          %span| Cobrar documentos
+        .task_icons
+          %span
+            %i.fas.fa-trash
+
+      .taskPanel
+        .task_text
+          %span.pr-2
+            07
+          %span| Enviar comprovantes
+        .task_icons
+          %span
+            %i.fas.fa-trash
+
+      .taskPanel
+        .task_text
+          %span.pr-2
+            11
+          %span| Cadastrar dependentes
+        .task_icons
+          %span
+            %i.fas.fa-trash
+
+      .taskPanel
+        .task_text
+          %span.pr-2
+            21
+          %span| Efetuar pagamento
+        .task_icons
+          %span
+            %i.fas.fa-trash
+
+    .panelRightFooter
+      .footerLembrete
+        .titleFooter 78
+        .subFooter
+          %small Ativos
+      .footerLembrete
+        .titleFooter 35
+        .subFooter
+          %small pendentes
