@@ -1,7 +1,17 @@
-%h1 Editing register
+= render 'shared/navbarPrincipal'
 
-= render 'form'
+.panelGeral
+  .conteudo
+    .level
+      .level-left
+        .titleConteudo
+          %h1.title.is-size-3.has-text-grey.mb-5
+            - if params[:parent_id].present?
+              Edit Dependente
+            - else
+              Edit Associados
 
-= link_to 'Show', @register
-\|
-= link_to 'Back', registers_path
+    .contentGeral.mt-0
+      .containerBase
+
+        = render 'form', register: @register

@@ -1,0 +1,59 @@
+.document_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  .boxDocument {
+    flex: 1;
+    margin-right: 10px;
+  }
+  .addressDocument {
+    flex: 1;
+    margin-right: 10px;
+  }
+  .contactDocument {
+    flex: 1;
+    margin-right: 10px;
+  }
+  .docDocument {
+    flex: 1;
+  }
+}
+
+.quadroDocument {
+  flex: 1;
+  border: 1px solid $linkcolor;
+  position: relative;
+
+  .legend {
+    margin-top: -15px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #fff;
+    width: 120px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+  }
+
+  article {
+    padding: 1rem 1rem;
+
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 5px;
+      border-bottom: 1px solid $backlinkcolor_hover;
+    }
+
+    .labels {
+      font-weight: bold;
+      // width: 100px;
+    }
+    .register {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,27 +1,83 @@
-%p#notice= notice
+= render 'shared/navbarPrincipal'
 
-%p
-  %b Name:
-  = @register.name
-%p
-  %b Date register:
-  = @register.date_register
-%p
-  %b Cpf:
-  = @register.cpf
-%p
-  %b Rg:
-  = @register.rg
-%p
-  %b Birth:
-  = @register.birth
-%p
-  %b Type plan:
-  = @register.type_plan
-%p
-  %b Status:
-  = @register.status
+.panelGeral
+  .conteudo
+    .level
+      .level-left
+        .titleConteudo
+          %h1.title.is-size-3.has-text-grey.mb-5
+            = @register.name
 
-= link_to 'Edit', edit_register_path(@register)
-\|
-= link_to 'Back', registers_path
+      .level-right
+        = link_to 'Edit', edit_register_path(@register), class: 'button is-success'
+
+    .contentGeral.mt-0
+      .containerBase
+        .document_container
+          .boxDocument
+            .quadroDocument
+              .legend Documentos
+              %article
+                %span
+                  .labels CPF:
+                  .register #{ @register.cpf }
+                %span
+                  .labels RG:
+                  .register #{ @register.rg }
+                %span
+                  .labels Data de Nascimento:
+                  .register #{ @register.birth }
+                %span
+                  .labels Data de Adessão:
+                  .register #{ @register.date_register }
+                %span
+                  .labels Tipo de Adessão:
+                  .register #{ @register.type_plan }
+                %span
+                  .labels Status:
+                  .register #{ @register.status }
+                %span
+                  .labels Total de Dependentes:
+                  .register #{ Register.total_dependentes(@register.id) }
+
+
+          .addressDocument
+            .quadroDocument
+              .legend Endereço
+              %article
+
+          .contactDocument
+            .quadroDocument
+              .legend Contatos
+              %article
+
+          .docDocument
+            .quadroDocument
+              .legend Cópias
+              %article
+
+-# %p
+-#   %b Name:
+-#   = @register.name
+-# %p
+-#   %b Date register:
+-#   = @register.date_register
+-# %p
+-#   %b Cpf:
+-#   = @register.cpf
+-# %p
+-#   %b Rg:
+-#   = @register.rg
+-# %p
+-#   %b Birth:
+-#   = @register.birth
+-# %p
+-#   %b Type plan:
+-#   = @register.type_plan
+-# %p
+-#   %b Status:
+-#   = @register.status
+-#
+-# = link_to 'Edit', edit_register_path(@register)
+-# \|
+-# = link_to 'Back', registers_path
