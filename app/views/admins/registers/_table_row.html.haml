@@ -1,0 +1,16 @@
+%tr
+  %td #{ register.id }
+  %td #{ register.name }
+  %td #{ register.date_register }
+  %td #{ register.cpf }
+  %td #{ register.rg }
+  %td #{ register.birth }
+  %td #{ register.type_plan }
+  %td{align: 'right'}
+    -if register.parent?
+      = link_to new_register_path(parent_id: register.id), class: 'button is-warning is-small mr-2' do
+        %i.fas.fa-user-plus
+    = link_to edit_register_path(register), class: 'button is-info is-small mr-2' do
+      %i.fas.fa-user-cog
+    = link_to  '#', class: 'button is-danger is-small' do
+      %i.fas.fa-user-minus
