@@ -1,18 +1,5 @@
-%nav.navPrincipal
-  .menubar
-    .menubarLeft
-      %div w<span>ork</span>w<span>ife</span>
-    .menubarRight
-      = link_to '#', class: 'menu_bar' do
-        %i.fas.fa-tasks
-      = link_to '#', class: "menu_bar" do
-        %i.fas.fa-envelope
-      = link_to '#', class: 'menu_bar' do
-        %i.fas.fa-bell
+= render 'shared/navbarPrincipal'
 
-  .settingUser
-    = link_to '#', class: 'menu_bar' do
-      %i.fas.fa-cog
 .panelGeral
   .conteudo
     .titleConteudo

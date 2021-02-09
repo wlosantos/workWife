@@ -9,4 +9,12 @@ class Register < ApplicationRecord
   validates :type_plan, inclusion: { in: Register.type_plans }
   validates :status, inclusion: { in: Register.statuses }
 
+  def parent?
+    parent_id.nil?
+  end
+
+  def self.total_dependentes(id)
+    self.where(parent_id: id).count
+  end
+
 end

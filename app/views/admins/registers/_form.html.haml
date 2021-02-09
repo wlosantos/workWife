@@ -1,31 +1,35 @@
-= form_for @register do |f|
-  - if @register.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@register.errors.count, "error")} prohibited this register from being saved:"
-      %ul
-        - @register.errors.full_messages.each do |message|
-          %li= message
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :date_register
-    = f.date_select :date_register
-  .field
-    = f.label :cpf
-    = f.text_field :cpf
-  .field
-    = f.label :rg
-    = f.text_field :rg
-  .field
-    = f.label :birth
-    = f.date_select :birth
-  .field
-    = f.label :type_plan
-    = f.number_field :type_plan
-  .field
-    = f.label :status
-    = f.number_field :status
-  .actions
-    = f.submit 'Save'
+= form_with(model: register, local: true) do |f|
+  = f.hidden_field :parent_id, value: register.parent_id || params[:parent_id]
+  .columns.mt-4
+    .column.is-8
+      .field
+        = f.label 'Data de Registro', class: 'label'
+        .control
+          = f.date_select :date_register, start_year: 2000
+      .field
+        = f.label 'Nome', class: 'label'
+        .control
+          = f.text_field :name, class: 'input'
+      .columns
+        .column
+          .field
+            = f.label :cpf, class: 'label'
+            .control
+              = f.text_field :cpf, class: 'input'
+        .column
+          .field
+            = f.label :rg, class: 'label'
+            .control
+              = f.text_field :rg, class: 'input'
+      .field
+        = f.label 'Data de Nascimento', class: 'label'
+        .control
+          = f.date_select :birth, start_year: 1960
+      .field
+        -if params[:parent_id].present?
+          = f.hidden_field :type_plan, value: :dependente
+        - else
+          = f.hidden_field :type_plan, value: :titular
+        = f.hidden_field :status, value: :ativo
+      .actions.mt-5
+        = f.submit 'Salvar', class: 'button is-info', data: {disable_with: 'Salvando'}

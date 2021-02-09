@@ -1,5 +1,17 @@
-%h1 New register
+= render 'shared/navbarPrincipal'
 
-= render 'form'
+.panelGeral
+  .conteudo
+    .level
+      .level-left
+        .titleConteudo
+          %h1.title.is-size-3.has-text-grey.mb-5
+            - if params[:parent_id].present?
+              Novo Dependente
+            - else
+              Novo Associados
 
-= link_to 'Back', registers_path
+    .contentGeral.mt-0
+      .containerBase
+
+        = render 'form', register: @register
