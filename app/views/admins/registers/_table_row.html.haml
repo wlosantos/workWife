@@ -1,16 +1,16 @@
 %tr
-  %td #{ register.id }
-  %td #{ register.name }
-  %td #{ register.date_register }
-  %td #{ register.cpf }
-  %td #{ register.rg }
-  %td #{ register.birth }
-  %td #{ register.type_plan }
-  %td{align: 'right'}
+  %td{width: '5%'} #{ register.id }
+  %td{width: '18%'} #{ register.name }
+  %td{width: '10%'} #{ register.date_register }
+  %td{width: '12%'} #{ register.cpf }
+  %td{width: '12%'} #{ register.rg }
+  %td{width: '12%'} #{ register.birth }
+  %td{width: '12%'} #{ register.type_plan }
+  %td{width: '19%', align: 'right'}
     -if register.parent?
       = link_to new_register_path(parent_id: register.id), class: 'button is-warning is-small mr-2' do
         %i.fas.fa-user-plus
     = link_to edit_register_path(register), class: 'button is-info is-small mr-2' do
       %i.fas.fa-user-cog
-    = link_to  '#', class: 'button is-danger is-small' do
+    = link_to  register, method: :delete, class: 'button is-danger is-small', data:{confirm: 'Você tem certeza?'} do
       %i.fas.fa-user-minus

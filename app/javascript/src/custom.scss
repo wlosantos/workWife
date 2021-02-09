@@ -184,9 +184,15 @@ main {
   }
 
   .listTableRegister {
-    max-height: 600px;
+    max-height: 560px;
     overflow-y: scroll;
     border-bottom: 2px solid $linkcolorDark;
+  }
+
+  .searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
   }
 }
 

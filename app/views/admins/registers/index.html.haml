@@ -11,48 +11,37 @@
 
     .contentGeral.mt-0
       .containerBase
+        .searchContainer
+          = form_with(url: '#', local: true) do |form|
+            .field.has-addons
+              .control
+                =form.text_field :search, class: 'input', placehoder: 'digite um nome'
+              .control
+                =form.submit 'pesquisar', class: 'button is-info'
+
+        %table.table.is-striped.is-fullwidth
+          %thead
+            %tr
+              %th{width: '5%'} #
+              %th{width: '18%'} Nome
+              %th{width: '10%'} Dt. Cadastro
+              %th{width: '12%'} CPF
+              %th{width: '12%'} RG
+              %th{width: '12%'} Dt. Nascimento
+              %th{width: '12%'} Tipo
+              %th{width: '19%'}
         .listTableRegister
           %table.table.is-striped.is-fullwidth
-            %thead
+            -# %thead
               %tr
-                %th{width: '5%'} #
-                %th{width: '18%'} Nome
-                %th{width: '10%'} Dt. Cadastro
-                %th{width: '12%'} CPF
-                %th{width: '12%'} RG
-                %th{width: '12%'} Dt. Nascimento
-                %th{width: '12%'} Tipo
+                %th{width: '5%'}
+                %th{width: '18%'}
+                %th{width: '10%'}
+                %th{width: '12%'}
+                %th{width: '12%'}
+                %th{width: '12%'}
+                %th{width: '12%'}
                 %th{width: '19%'}
             %tbody
               - @registers.each do |register|
                 = render 'table_row', register: register
-
--# %h1 Listing registers
-
--# %table
-  %thead
-    %tr
-      %th Name
-      %th Date register
-      %th Cpf
-      %th Rg
-      %th Birth
-      %th Type plan
-      %th Status
-      %th
-      %th
-      %th
-
-  %tbody
-    - @registers.each do |register|
-      %tr
-        %td= register.name
-        %td= register.date_register
-        %td= register.cpf
-        %td= register.rg
-        %td= register.birth
-        %td= register.type_plan
-        %td= register.status
-        %td= link_to 'Show', register
-        %td= link_to 'Edit', edit_register_path(register)
-        %td= link_to 'Destroy', register, method: :delete, data: { confirm: 'Are you sure?' }
