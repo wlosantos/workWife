@@ -13,4 +13,8 @@ class Register < ApplicationRecord
     parent_id.nil?
   end
 
+  def self.total_dependentes(id)
+    self.where(parent_id: id).count
+  end
+
 end
